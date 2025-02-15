@@ -1,0 +1,17 @@
+<section id="tasks">
+    <header>
+        <h2>{{UserName}}'s Tasks</h2>
+        <menu>
+            <button>
+                Add Task
+            </button>
+        </menu>
+    </header>
+
+    <ul *ngFor="let task of getUserSummary">
+            <li>
+                <app-task [usertask]="task" (complete)="onComplete($event)" />
+            </li>
+    </ul>
+</section>
+
